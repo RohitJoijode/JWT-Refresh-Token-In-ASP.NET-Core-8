@@ -1,0 +1,31 @@
+dotnet add package Microsoft.AspNetCore.Cors
+
+For ASP.NET Core 6+ (in Program.cs), add the following:
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000") // Your Angular app origin
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // This is required for credentials like cookies or headers
+    });
+});
+
+var app = builder.Build();
+
+// Use the CORS policy
+app.UseCors("AllowSpecificOrigin");
+
+// Other middleware
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.Run();
+
+

@@ -1,0 +1,90 @@
+[
+  {
+    "ContainingType": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.TestControllers",
+    "Method": "AuthorizedTest",
+    "RelativePath": "AuthorizedTest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "JWT_TOKEN_REFRESH_NET_CORE_8.Models.LogInUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "JWT_TOKEN_REFRESH_NET_CORE_8.Models.RefreshTokenModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.AuthController",
+    "Method": "RegisterUser",
+    "RelativePath": "Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.AuthController\u002BRegisterUserModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.TestControllers",
+    "Method": "Index",
+    "RelativePath": "Test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JWT_TOKEN_REFRESH_NET_CORE_8.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[JWT_TOKEN_REFRESH_NET_CORE_8.WeatherForecast, JWT_TOKEN_REFRESH_NET_CORE_8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
