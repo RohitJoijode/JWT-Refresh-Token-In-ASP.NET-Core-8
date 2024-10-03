@@ -11,6 +11,16 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Controllers
     [ApiController]
     public class TestControllers : Controller
     {
+
+        private readonly IAuthService _authService;
+        private readonly DBEngine _DbEngine;
+
+        public TestControllers(IAuthService authService,DBEngine DbEngine)
+        {
+            _authService = authService;
+            _DbEngine = DbEngine;
+        }
+
         [HttpGet("Test")]
         public IActionResult Index()
         {
@@ -31,6 +41,15 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Controllers
 
             //response += $"{Environment.NewLine}Exp Time : { jwt.ValidTo.ToLongTimeString()}, Time : {DateTime.Now.ToLongTimeString()}";
             return Ok(response);
+        }
+
+
+        [Authorize]
+        [HttpGet("Users")]
+        public IActionResult Users() 
+        {
+            var response = _DbEngine.Tbl_Users1.ToList(); 
+             return Ok(response);
         }
     }
 }

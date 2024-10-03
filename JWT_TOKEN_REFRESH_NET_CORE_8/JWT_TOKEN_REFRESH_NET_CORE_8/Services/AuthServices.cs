@@ -108,7 +108,8 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Services
                     Tbl_RefreshToken.Token = response.JwtToken;
                     Tbl_RefreshToken.UserId = UserExits.UserId.ToString();
                     Tbl_RefreshToken.RefreshToken = response.RefreshToken;
-                    Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    //Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddMinutes(5);
                     Tbl_RefreshToken.IsActive = true;
                     _DbEngine.Tbl_RefreshToken1.Add(Tbl_RefreshToken);
                     _DbEngine.SaveChanges();
@@ -119,7 +120,8 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Services
                         Tbl_RefreshToken = FoundRefreshToken;
                         Tbl_RefreshToken.Token = response.JwtToken;
                         Tbl_RefreshToken.RefreshToken = response.RefreshToken;
-                        Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                        //Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                        Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddMinutes(5);
                         Tbl_RefreshToken.ModifyOn = DateTime.Now;
                         Tbl_RefreshToken.IsActive = true;
                         _DbEngine.Entry(Tbl_RefreshToken).State = EntityState.Modified;
@@ -240,7 +242,8 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Services
                     Tbl_RefreshToken.Token = response.JwtToken;
                     Tbl_RefreshToken.UserId = userId;
                     Tbl_RefreshToken.RefreshToken = response.RefreshToken;
-                    Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    //Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddMinutes(5);
                     Tbl_RefreshToken.IsActive = true;
                     _DbEngine.Tbl_RefreshToken1.Add(Tbl_RefreshToken);
                     _DbEngine.SaveChanges();
@@ -252,7 +255,8 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Services
                     Tbl_RefreshToken = FoundRefreshToken;
                     Tbl_RefreshToken.Token = response.JwtToken;
                     Tbl_RefreshToken.RefreshToken = response.RefreshToken;
-                    Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    //Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddHours(2);
+                    Tbl_RefreshToken.RefreshTokenExpiry = DateTime.Now.AddMinutes(5);
                     Tbl_RefreshToken.ModifyOn = DateTime.Now;
                     Tbl_RefreshToken.IsActive = true;
                     _DbEngine.Entry(Tbl_RefreshToken).State = EntityState.Modified;

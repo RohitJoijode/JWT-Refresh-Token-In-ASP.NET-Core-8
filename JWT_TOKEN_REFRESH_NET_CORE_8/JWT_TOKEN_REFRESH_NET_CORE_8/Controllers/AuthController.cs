@@ -54,8 +54,9 @@ namespace JWT_TOKEN_REFRESH_NET_CORE_8.Controllers
             return Unauthorized();
         }
 
-        [HttpPost("RefreshToken")]
-        public async Task<IActionResult> RefreshToken(RefreshTokenModel model)
+        //[Authorize]
+        [HttpGet("RefreshToken")]
+        public async Task<IActionResult> RefreshToken([FromQuery] RefreshTokenModel model)
         {
             var loginResult = await _authService.RefreshToken(model);
             if (loginResult.IsLogedIn)
